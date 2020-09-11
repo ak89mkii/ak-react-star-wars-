@@ -14,25 +14,25 @@ async componentDidMount() {
     this.setState({ starshipList: starshipList.results })
 }
 
-render() {
-    return (
-        <>
-            <h1>Starship List</h1>
-            {this.state.starshipList.map((starship) =>
+    render() {
+        return (
+            <>
+                <h1>Starship List</h1>
+                {this.state.starshipList.map((starship) =>
                 <div key={starship.url}>
                     <Link
                     to={{
-                        pathname: '/starship',
-                        state: {starship}
+                        pathname: "/starship",
+                        state: { starship }
                     }}
                 >
                     {starship.name}
                     </Link><br></br>
                 </div>
-            )}
-        </>
-    )
-}
+                )}
+            </>
+        )
+    }
 }
 
 export default StarshipList

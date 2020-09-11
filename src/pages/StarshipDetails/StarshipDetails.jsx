@@ -3,14 +3,14 @@ import { getStarshipDetails } from '../../services/api-calls'
 
 class StarshipDetails extends Component {
     state = {
-        name: this.props.location.state.starship.url,
-        starshipDetails: {},
+        url: this.props.location.state.starship.url,
+        starshipDetails: {}
     }
 
     async componentDidMount() {
         const starshipDetails = await getStarshipDetails(this.state.url)
         console.log(starshipDetails)
-        this.setState({ starshipDetails })
+        this.setState({ starshipDetails})
     }
 
     render() { 

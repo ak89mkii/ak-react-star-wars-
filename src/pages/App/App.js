@@ -18,7 +18,7 @@ class App extends Component {
     <StarshipList />}
     />
     <Route 
-    exact path='/starship'
+    exact path='/starship/'
     render={( {location} ) => 
       <StarshipDetails
         location={location}
